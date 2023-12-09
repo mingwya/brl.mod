@@ -91,6 +91,7 @@ Function PollEvent:Int()
 		EndIf
 	EndIf
 	CurrentEvent=queue[queue_get & QUEUEMASK]
+	queue[queue_get & QUEUEMASK]=Null
 	queue_get:+1
 	Return CurrentEvent.id
 End Function
